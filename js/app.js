@@ -29,7 +29,7 @@ createApp({
 			// console.log('add task:', this.inputValue)
             
 			const newTask = this.tasks.push({text:this.inputValue, done:false})
-			this.tasks.push(newTask)
+			
 			this.inputValue = ''
 		},
 		removeTask(startIndex) {
