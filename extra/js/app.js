@@ -13,7 +13,7 @@ createApp({
                     done: false,
                 },
                 {
-                    text:'Conquistare il mondo',
+                    text:'Distrasi a lezione',
                     done: true,
                 },
                 {
