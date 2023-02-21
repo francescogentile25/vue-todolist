@@ -26,8 +26,8 @@ createApp({
 	},
 	methods: {
 		addTask() {
+			this.tasks.push({text:this.inputValue, done:false})
 			this.inputValue = ''
-			return this.tasks.push({text:this.inputValue, done:false})
 		},
 		removeTask(startIndex) {
 			this.tasks.splice(startIndex, 1)
