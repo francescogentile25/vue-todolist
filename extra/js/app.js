@@ -26,24 +26,36 @@ createApp({
 	},
 	methods: {
 		addTask() {
-			// console.log('add task:', this.inputValue)
-            
-			const newTask = this.tasks.push({text:this.inputValue, done:false})
-			
 			this.inputValue = ''
+			return this.tasks.push({text:this.inputValue, done:false})
 		},
 		removeTask(startIndex) {
-			console.log(
-				'elimino il task con indice:',
-				startIndex,
-				this.tasks[startIndex]
-			)
 			this.tasks.splice(startIndex, 1)
 		},
-		saluta(){
-			console.log('ciao') 
+		// saluta(task){
+		// 	console.log('ciao') 
+		// 	// return this.done !=this.done
+		// 	return !task.done ? 'text-decoration-line-through' : ''
 			
-		}
+		// }
+		toggle(task) {
+			switch (task.done) {
+			case true:
+				task.done = false;
+				break;
+			case false:
+				task.done = true;
+				break;
+			default:
+				break;
+			}
+		},
 	},
 }).mount('#app')
 
+// if (done === true){
+// 	done= false
+// }
+// if (done === false){
+// 	done =true
+// }
