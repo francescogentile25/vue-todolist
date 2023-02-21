@@ -12,15 +12,21 @@
 	</head>
 	<body>
 		<div id="app">
+			<header>
+				<nav class="navbar navbar-light bg-white">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#">
+							<img src="img/Logo.png" alt=""
+								class="d-inline-block align-text-top">
+							<span class="fs-2">Tobolist</span>
+						</a>
+					</div>
+				</nav>
+			</header>
 			<section class="py-5">
-				<div class="container">
-					<h1>TODOLIST</h1>
-				</div>
-				<div class="container py-3">
+				<div class="container bg-white py-2 rounded-top-2">
+					<h1>Tobolist</h1>
 					<div class="mb-3 row">
-						<label for="inputPassword" class="col-auto col-form-label"
-							>Aggiungi task</label
-						>
 						<div class="col">
 							<input
 								@keydown.enter="addTask"
@@ -29,14 +35,14 @@
 								id="inputPassword"
 								placeholder="Nuova cosa da fare..."
 								v-model="inputValue"
-                                />
+								/>
 						</div>
 						<div class="col-auto">
-							<button @click="addTask" class="btn btn-primary">Aggiungi</button>
+							<button @click="addTask" class="btn btn-primary">Add Task</button>
 						</div>
 					</div>
 				</div>
-				<div class="container">
+				<div class="container  bg-white py-4 my-1 rounded-bottom-2">
 					<div class="card">
 						<ul class="list-group list-group-flush">
 							<li @click="toggle(task)" v-for="(task, index) in tasks" class="list-group-item" :class="(task.done === true ? 'text-decoration-line-through' : '')">

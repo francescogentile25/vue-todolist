@@ -5,11 +5,11 @@ createApp({
 		return {
 			tasks: [
                 {
-                    text: 'Fare la spesa',
+                    text: 'Fare un carosello',
                     done: true,
                 },
                 {
-                    text: 'Mandare la consegna alla classe',
+                    text: 'Fare un carosello',
                     done: false,
                 },
                 {
