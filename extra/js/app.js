@@ -32,12 +32,6 @@ createApp({
 		removeTask(startIndex) {
 			this.tasks.splice(startIndex, 1)
 		},
-		// saluta(task){
-		// 	console.log('ciao') 
-		// 	// return this.done !=this.done
-		// 	return !task.done ? 'text-decoration-line-through' : ''
-			
-		// }
 		toggle(task) {
 			switch (task.done) {
 			case true:
@@ -52,10 +46,3 @@ createApp({
 		},
 	},
 }).mount('#app')
-
-// if (done === true){
-// 	done= false
-// }
-// if (done === false){
-// 	done =true
-// }
